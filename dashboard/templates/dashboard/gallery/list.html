@@ -1,0 +1,29 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Gallery{% endblock %}
+{% block page_title %}Media Gallery{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2 class="page-header-title">Media Gallery</h2>
+    <p class="page-header-subtitle">Manage your media assets</p>
+</div>
+
+<div class="card">
+    {% if assets %}
+    <div class="grid grid-cols-4">
+        {% for asset in assets %}
+        <div style="border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+            <img src="{{ asset.url }}" alt="{{ asset.public_id }}" style="width: 100%; height: 200px; object-fit: cover;">
+            <div style="padding: 12px;">
+                <p style="font-size: 12px; color: var(--text-muted); word-break: break-all;">{{ asset.public_id|truncatechars:30 }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-muted">No media assets yet.</p>
+    {% endif %}
+</div>
+{% endblock %}
+

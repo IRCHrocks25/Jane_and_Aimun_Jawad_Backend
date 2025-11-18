@@ -1,0 +1,49 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Testimonials{% endblock %}
+{% block page_title %}Testimonials{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2 class="page-header-title">Testimonials</h2>
+    <p class="page-header-subtitle">Manage customer testimonials</p>
+</div>
+
+<div class="card">
+    {% if testimonials %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Rating</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for testimonial in testimonials %}
+            <tr>
+                <td><strong>{{ testimonial.name }}</strong></td>
+                <td>{{ testimonial.role|default:'—' }}</td>
+                <td>
+                    {% if testimonial.rating %}
+                    {% for i in "12345"|make_list %}
+                        {% if forloop.counter <= testimonial.rating %}⭐{% else %}☆{% endif %}
+                    {% endfor %}
+                    {% else %}
+                    <span class="text-muted">—</span>
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="#" class="btn-icon" title="Edit">✏️</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p class="text-muted">No testimonials yet.</p>
+    {% endif %}
+</div>
+{% endblock %}
+

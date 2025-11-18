@@ -1,0 +1,57 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Services Management{% endblock %}
+{% block page_title %}Services{% endblock %}
+
+{% block content %}
+<div class="page-header-with-actions">
+    <div>
+        <h2 class="page-header-title">Services</h2>
+        <p class="page-header-subtitle">Manage your service offerings</p>
+    </div>
+    <a href="{% url 'dashboard:service_new' %}" class="btn btn-primary">
+        <span>➕</span>
+        <span>Add New Service</span>
+    </a>
+</div>
+
+<div class="card">
+    {% if services %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Label</th>
+                <th>Title</th>
+                <th>Sort Order</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for service in services %}
+            <tr>
+                <td><span class="text-muted">{{ service.label|default:'—' }}</span></td>
+                <td><strong>{{ service.title }}</strong></td>
+                <td>{{ service.sort_order }}</td>
+                <td>
+                    <div class="flex gap-sm">
+                        <a href="{% url 'dashboard:service_edit' service.id %}" class="btn-icon" title="Edit">
+                            ✏️
+                        </a>
+                        <form method="POST" action="{% url 'dashboard:service_delete' service.id %}" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn-icon" title="Delete" onclick="return confirm('Are you sure?')">
+                                🗑️
+                            </button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p class="text-muted">No services yet. <a href="{% url 'dashboard:service_new' %}">Add your first service</a></p>
+    {% endif %}
+</div>
+{% endblock %}
+

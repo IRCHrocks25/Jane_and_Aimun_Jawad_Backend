@@ -1,0 +1,36 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Footer Settings{% endblock %}
+{% block page_title %}Footer{% endblock %}
+
+{% block content %}
+<div class="max-w-content">
+    <div class="page-header">
+        <h2 class="page-header-title">Footer Settings</h2>
+        <p class="page-header-subtitle">Configure your site footer</p>
+    </div>
+
+    <div class="card">
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label class="form-label" for="copyright_text">Copyright Text</label>
+                <input 
+                    type="text" 
+                    id="copyright_text" 
+                    name="copyright_text" 
+                    class="input" 
+                    value="{{ footer.copyright_text|default:'' }}"
+                    placeholder="© 2025 Centaura Group. All Rights Reserved."
+                >
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Save Footer</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

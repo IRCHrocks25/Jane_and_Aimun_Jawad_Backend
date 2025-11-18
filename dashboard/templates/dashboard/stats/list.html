@@ -1,0 +1,57 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Stats Management{% endblock %}
+{% block page_title %}Stats{% endblock %}
+
+{% block content %}
+<div class="page-header-with-actions">
+    <div>
+        <h2 class="page-header-title">Statistics</h2>
+        <p class="page-header-subtitle">Manage your homepage statistics</p>
+    </div>
+    <a href="{% url 'dashboard:stat_new' %}" class="btn btn-primary">
+        <span>➕</span>
+        <span>Add New Stat</span>
+    </a>
+</div>
+
+<div class="card">
+    {% if stats %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Value</th>
+                <th>Label</th>
+                <th>Sort Order</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stat in stats %}
+            <tr>
+                <td><strong>{{ stat.value }}</strong></td>
+                <td>{{ stat.label }}</td>
+                <td>{{ stat.sort_order }}</td>
+                <td>
+                    <div class="flex gap-sm">
+                        <a href="{% url 'dashboard:stat_edit' stat.id %}" class="btn-icon" title="Edit">
+                            ✏️
+                        </a>
+                        <form method="POST" action="{% url 'dashboard:stat_delete' stat.id %}" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn-icon" title="Delete" onclick="return confirm('Are you sure?')">
+                                🗑️
+                            </button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p class="text-muted">No stats yet. <a href="{% url 'dashboard:stat_new' %}">Add your first stat</a></p>
+    {% endif %}
+</div>
+{% endblock %}
+

@@ -1,0 +1,47 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Navigation Settings{% endblock %}
+{% block page_title %}Navigation{% endblock %}
+
+{% block content %}
+<div class="max-w-content">
+    <div class="page-header">
+        <h2 class="page-header-title">Navigation Settings</h2>
+        <p class="page-header-subtitle">Configure your site navigation</p>
+    </div>
+
+    <div class="card">
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label class="form-label" for="logo_text">Logo Text</label>
+                <input 
+                    type="text" 
+                    id="logo_text" 
+                    name="logo_text" 
+                    class="input" 
+                    value="{{ navigation.logo_text|default:'' }}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="logo_image_url">Logo Image URL</label>
+                <input 
+                    type="text" 
+                    id="logo_image_url" 
+                    name="logo_image_url" 
+                    class="input" 
+                    value="{{ navigation.logo_image_url|default:'' }}"
+                    placeholder="https://... or leave empty"
+                >
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Save Navigation</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

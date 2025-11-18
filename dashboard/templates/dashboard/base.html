@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dashboard{% endblock %} - Centaura CMS</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dashboard/css/dashboard.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="app-shell">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>Centaura CMS</h2>
+            </div>
+            <nav>
+                <ul class="sidebar-nav">
+                    <li>
+                        <a href="{% url 'dashboard:home' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                            <span>📊</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'dashboard:gallery' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">
+                            <span>🖼️</span>
+                            <span>Gallery</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'dashboard:seo_edit' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'seo_edit' %}active{% endif %}">
+                            <span>🔍</span>
+                            <span>SEO</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'dashboard:navigation_edit' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'navigation_edit' %}active{% endif %}">
+                            <span>🧭</span>
+                            <span>Navigation</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'dashboard:hero_edit' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'hero_edit' %}active{% endif %}">
+                            <span>🎯</span>
+                            <span>Hero</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'dashboard:stats_list' %}" class="sidebar-nav-link {% if 'stats' in request.resolver_match.url_name %}active{% endif %}">
+                            <span>📈</span>
+                            <span>Stats</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'dashboard:services_list' %}" class="sidebar-nav-link {% if 'services' in request.resolver_match.url_name %}active{% endif %}">
+                            <span>⚙️</span>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'dashboard:portfolio_list' %}" class="sidebar-nav-link {% if 'portfolio' in request.resolver_match.url_name %}active{% endif %}">
+                            <span>💼</span>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'dashboard:testimonials_list' %}" class="sidebar-nav-link {% if 'testimonials' in request.resolver_match.url_name %}active{% endif %}">
+                            <span>💬</span>
+                            <span>Testimonials</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'dashboard:faqs_list' %}" class="sidebar-nav-link {% if 'faqs' in request.resolver_match.url_name %}active{% endif %}">
+                            <span>❓</span>
+                            <span>FAQs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'dashboard:footer_edit' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'footer_edit' %}active{% endif %}">
+                            <span>📄</span>
+                            <span>Footer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'dashboard:final_word_edit' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'final_word_edit' %}active{% endif %}">
+                            <span>✨</span>
+                            <span>Final Word</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h1 class="header-title">{% block page_title %}Dashboard{% endblock %}</h1>
+                <div class="header-user">
+                    <span class="header-user-name">{{ user.username }}</span>
+                    <a href="{% url 'dashboard:logout' %}" class="btn btn-secondary">Logout</a>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+    </div>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Dashboard Home{% endblock %}
+{% block page_title %}Dashboard Overview{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2 class="page-header-title">Welcome back, {{ user.username }}</h2>
+    <p class="page-header-subtitle">Manage your content and monitor your site</p>
+</div>
+
+<div class="grid grid-cols-4">
+    <div class="stat-card">
+        <div class="stat-value">{{ stats_count }}</div>
+        <div class="stat-label">Stats</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value">{{ services_count }}</div>
+        <div class="stat-label">Services</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value">{{ portfolio_count }}</div>
+        <div class="stat-label">Portfolio Items</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value">{{ testimonials_count }}</div>
+        <div class="stat-label">Testimonials</div>
+    </div>
+</div>
+
+<div class="card">
+    <h3 style="margin-bottom: 16px; font-size: 20px; font-weight: 600;">Quick Actions</h3>
+    <div class="flex gap-md">
+        <a href="{% url 'dashboard:hero_edit' %}" class="btn btn-primary">Edit Hero Section</a>
+        <a href="{% url 'dashboard:stats_list' %}" class="btn btn-secondary">Manage Stats</a>
+        <a href="{% url 'dashboard:services_list' %}" class="btn btn-secondary">Manage Services</a>
+    </div>
+</div>
+{% endblock %}
+

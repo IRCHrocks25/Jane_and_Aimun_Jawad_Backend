@@ -1,0 +1,97 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Final Word Section{% endblock %}
+{% block page_title %}Final Word{% endblock %}
+
+{% block content %}
+<div class="max-w-content">
+    <div class="page-header">
+        <h2 class="page-header-title">Final Word Section</h2>
+        <p class="page-header-subtitle">Configure the final word section on your homepage</p>
+    </div>
+
+    <div class="card">
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label class="form-label" for="label">Label</label>
+                <input 
+                    type="text" 
+                    id="label" 
+                    name="label" 
+                    class="input" 
+                    value="{{ final_word.label|default:'' }}"
+                    placeholder="FINAL WORD"
+                >
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="title">Title</label>
+                <input 
+                    type="text" 
+                    id="title" 
+                    name="title" 
+                    class="input" 
+                    value="{{ final_word.title|default:'' }}"
+                    placeholder="The Business You Build Determines the Options You Have"
+                >
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="background_image">Background Image URL</label>
+                <input 
+                    type="text" 
+                    id="background_image" 
+                    name="background_image" 
+                    class="input" 
+                    value="{{ final_word.background_image|default:'' }}"
+                    placeholder="https://... or leave empty"
+                >
+                <p class="form-hint">Optional: Add a background image for the section. The image will be displayed with decorative overlays.</p>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="content">Content</label>
+                <textarea 
+                    id="content" 
+                    name="content" 
+                    class="input" 
+                    rows="10"
+                    placeholder="Enter content, one paragraph per line. Use empty lines to separate paragraphs."
+                >{{ content_text }}</textarea>
+                <p class="form-hint">Enter your content, one line per paragraph. Use empty lines to create paragraph breaks.</p>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="cta_text">CTA Button Text</label>
+                <input 
+                    type="text" 
+                    id="cta_text" 
+                    name="cta_text" 
+                    class="input" 
+                    value="{{ final_word.cta_text|default:'' }}"
+                    placeholder="THIS IS YOUR MOMENT: BOOK YOUR CONFIDENTIAL DIAGNOSTIC"
+                >
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="cta_url">CTA Button URL</label>
+                <input 
+                    type="text" 
+                    id="cta_url" 
+                    name="cta_url" 
+                    class="input" 
+                    value="{{ final_word.cta_url|default:'#' }}"
+                    placeholder="# or https://..."
+                >
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Save Final Word Section</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

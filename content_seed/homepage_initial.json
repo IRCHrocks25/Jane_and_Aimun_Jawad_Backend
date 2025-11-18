@@ -1,0 +1,343 @@
+{
+  "hero": {
+    "title": "THE EXIT YOU DESERVE.\nTHE VALUE WE PROTECT.",
+    "subtitle": "Centaura architects exits that maximize enterprise value and ensure decades of work aren't left on the table.",
+    "cta_text": "FREE CONFIDENTIAL DIAGNOSTIC",
+    "cta_url": "#",
+    "background_image_url": "figma:asset/4cb9d1befb6ac84e63b1b26de9d2d3d6a1e96b8e.png",
+    "quote": "We've lived the operator-to-exit journey: the sleepless nights, the heavy decisions, the fear of leaving value behind. Centaura was built to make sure no founder faces those moments alone.",
+    "founders": {
+      "names": "JANE & AIMUN JAWAD",
+      "title": "FOUNDERS",
+      "images": [
+        "figma:asset/8e469a9244e61470ddb5a8bb6b97cd1876447c0a.png",
+        "figma:asset/5f3ed505e90b92544a56eed55deb7ffbb1d2e2db.png"
+      ]
+    }
+  },
+  "stats": [
+    {
+      "label": "of businesses that go to market fail to sell",
+      "value": "75%"
+    },
+    {
+      "label": "of valuation lost due to rushed exits",
+      "value": "30%"
+    },
+    {
+      "label": "average valuation increase with proper preparation",
+      "value": "2X"
+    }
+  ],
+  "brutal_math": {
+    "title": "The Brutal Math of Missed Preparation",
+    "subtitle": "Most exit advisors won't show you these numbers. They should terrify you — and motivate you.",
+    "statistics": [
+      {
+        "value": "75%",
+        "description": "Of businesses that go to market fail to sell. Not because they're bad businesses, but because buyers see dependency, gaps, and chaos."
+      },
+      {
+        "value": "30%",
+        "description": "Of valuation is lost due to rushed exits, weak documentation, and poor preparation. That's millions left on the table."
+      },
+      {
+        "value": "60%",
+        "description": "Of owners regret their exit within five years, not because they sold, but because they sold unprepared and undervalued."
+      }
+    ],
+    "closing_text": "That's why Centaura is different. We don't just close deals. We close the gap between what your business is today and what it's truly worth tomorrow."
+  },
+  "why_centaura": {
+    "label": "WHY CENTAURA",
+    "title": "A Smarter Path to Exit Strategy",
+    "image_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop",
+    "features": [
+      {
+        "title": "We Architect, Not Just Advise",
+        "description": "Most advisors list your business and hope for the best. We engineer exits that maximize value and create competitive tension among buyers."
+      },
+      {
+        "title": "Corporate Precision Meets Entrepreneurial Grit",
+        "description": "We combine Fortune 500 transformation discipline with real-world deal-making experience to prepare your business for premium exits."
+      },
+      {
+        "title": "Built by Founders, For Founders",
+        "description": "We've lived the journey. We understand the weight of these decisions and ensure no founder faces them alone."
+      }
+    ],
+    "cta_text": "LEARN MORE ABOUT OUR APPROACH",
+    "cta_url": "#"
+  },
+  "services": [
+    {
+      "label": "YOUR NORTH STAR",
+      "title": "Strategic Roadmap",
+      "description": "A clear, actionable blueprint that balances technology adoption, acquisitions, and succession planning to maximize exit value.",
+      "outcome": "A tailored plan that aligns ambition with execution."
+    },
+    {
+      "label": "KNOW YOUR WORTH",
+      "title": "Exit Readiness Diagnostic",
+      "description": "In-depth review of financial, operational, and digital maturity to benchmark valuation and identify untapped potential and hidden risks.",
+      "outcome": "Crystal-clear picture of where you stand and what you are truly worth."
+    },
+    {
+      "label": "CONFIDENCE IN EVERY DEAL",
+      "title": "Technology Due Diligence",
+      "description": "Assess IT infrastructure, cybersecurity, data quality, and scalability. Identify hidden risks and provide buyers with confidence.",
+      "outcome": "Every deal built on confidence and transparency."
+    },
+    {
+      "label": "MAKING GROWTH STICK",
+      "title": "Integrate & Optimise",
+      "description": "Deploy AI-driven automation, refine processes, and integrate acquisitions seamlessly to deliver sustainable performance improvements.",
+      "outcome": "Sustainable performance that buyers pay premiums for."
+    },
+    {
+      "label": "UNLOCK HIDDEN VALUE",
+      "title": "Valuation Engineering",
+      "description": "Transform operational inefficiencies into strategic advantages. Increase EBITDA, reduce owner dependency, and strengthen market position.",
+      "outcome": "Higher multiples and competitive buyer interest."
+    },
+    {
+      "label": "EXECUTE WITH PRECISION",
+      "title": "Exit Execution",
+      "description": "From buyer outreach to deal structure and closing, we orchestrate every step to ensure you exit on your terms at maximum value.",
+      "outcome": "The exit you deserve, executed flawlessly."
+    }
+  ],
+  "comparison_table": {
+    "title": "What Makes Us Different?",
+    "subtitle": "Most advisors list your business. We engineer exits that maximize value.",
+    "columns": {
+      "feature": "Feature",
+      "typical": "Typical Exit Advisor",
+      "centaura": "Centaura Group"
+    },
+    "features": [
+      {
+        "name": "Exit Strategy & Planning",
+        "typical": true,
+        "centaura": true
+      },
+      {
+        "name": "Buyer Identification",
+        "typical": true,
+        "centaura": true
+      },
+      {
+        "name": "Business Valuation",
+        "typical": true,
+        "centaura": true
+      },
+      {
+        "name": "Technology Due Diligence",
+        "typical": false,
+        "centaura": true
+      },
+      {
+        "name": "AI & Automation Implementation",
+        "typical": false,
+        "centaura": true
+      },
+      {
+        "name": "Operational Transformation",
+        "typical": false,
+        "centaura": true
+      },
+      {
+        "name": "Digital Maturity Assessment",
+        "typical": false,
+        "centaura": true
+      },
+      {
+        "name": "Value Engineering (EBITDA Growth)",
+        "typical": false,
+        "centaura": true
+      },
+      {
+        "name": "Owner Dependency Reduction",
+        "typical": false,
+        "centaura": true
+      },
+      {
+        "name": "Post-Exit Integration Support",
+        "typical": false,
+        "centaura": true
+      }
+    ],
+    "cta_text": "SCHEDULE YOUR FREE DIAGNOSTIC",
+    "cta_url": "#"
+  },
+  "case_studies": [
+    {
+      "category": "MANUFACTURING",
+      "title": "From $8M to $14M in 18 Months",
+      "description": "How we transformed operational chaos into a premium exit for a mid-market manufacturer.",
+      "image_url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop"
+    },
+    {
+      "category": "PROFESSIONAL SERVICES",
+      "title": "Breaking Owner Dependency",
+      "description": "Strategic automation and leadership restructure increased valuation by 2.3x.",
+      "image_url": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop"
+    },
+    {
+      "category": "TECHNOLOGY",
+      "title": "The Roll-Up Strategy",
+      "description": "Acquiring competitors and integrating operations to dominate a niche market.",
+      "image_url": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop"
+    }
+  ],
+  "people_behind_strategy": {
+    "title": "THE PEOPLE BEHIND THE STRATEGY",
+    "intro": "We're Jane and Aimun — partners in life and in business. We built Centaura Group on a simple belief: business owners deserve more than a \"market rate\" exit. You've poured your life into building something remarkable. We believe you deserve the strategy, structure, and lasting impact that honours that work.",
+    "jane": {
+      "name": "Jane Jawad",
+      "title": "Corporate Transformation & Technology Strategist",
+      "image_url": "figma:asset/1c97b3750e449f4ea10a4fb95c04f98dd6d3b897.png",
+      "bio": [
+        "For more than two decades, I've guided global corporations through complexity and transformation. My career began at Accenture and later as Vice President in a global professional services firm, where I learned what disciplined change can do for organizations.",
+        "Today, I bring that same discipline into the entrepreneurial space, helping mid-market leaders cut through operational chaos, embrace AI-driven efficiency, and scale with clarity and confidence. Transformation isn't just about technology; it's about giving owners the freedom and structure to focus on what matters most."
+      ]
+    },
+    "aimun": {
+      "name": "Aimun Jawad",
+      "title": "Entrepreneurial Dealmaker & M&A Specialist",
+      "image_url": "figma:asset/e2fe93898bac6de46a3b4706a72fe118b8567992.png",
+      "bio": [
+        "Where Jane simplifies complexity, I thrive on uncovering hidden value. My journey has been less traditional — starting in aeronautical engineering and international oil & gas, then moving into entrepreneurship, joint ventures, and real estate models.",
+        "Since 2020, I've focused on valuations, roll-ups, and exit strategies. One of my favorite projects? Scaling a small Dubai bicycle shop from $600k to $2.5M by reimagining its e-commerce and operations. For me, the thrill is in spotting overlooked potential and structuring deals that unlock it."
+      ]
+    },
+    "cta_text": "SCHEDULE AN INTRO CALL",
+    "cta_url": "#"
+  },
+  "why_we_built": {
+    "left": {
+      "title": "Why We Built Centaura",
+      "content": [
+        "Again and again, we saw the same painful pattern: owners pouring decades into their businesses, only to sell underprepared, undervalued, and under-advised. We knew there was a better way.",
+        "That's why we created Centaura — to bridge ambition with action, to combine corporate transformation discipline with entrepreneurial dealmaking, and to architect exits that maximize value while preserving the foundations you've built."
+      ]
+    },
+    "right": {
+      "title": "A Global Perspective",
+      "content": [
+        "Centaura was never meant to be bound by borders. With our headquarters in the UK and hubs in Dubai and Singapore, we serve clients across Europe, North America, the Middle East, and Southeast Asia.",
+        "Our vision is to remain globally mobile, untethered from geography but deeply rooted in what never changes: trust, strategy, and results."
+      ]
+    }
+  },
+  "process": {
+    "label": "OUR PROCESS",
+    "title": "Four Steps to Your Premium Exit",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Free Diagnostic",
+        "description": "We assess your current position, identify gaps, and provide a clear picture of your exit readiness."
+      },
+      {
+        "number": "02",
+        "title": "Strategic Blueprint",
+        "description": "A customized roadmap balancing technology, operations, and M&A to maximize your enterprise value."
+      },
+      {
+        "number": "03",
+        "title": "Value Engineering",
+        "description": "We implement improvements that buyers pay premiums for: EBITDA growth, reduced dependency, and digital maturity."
+      },
+      {
+        "number": "04",
+        "title": "Exit Execution",
+        "description": "From buyer outreach to deal closing, we orchestrate every step to ensure you exit on your terms."
+      }
+    ],
+    "cta_text": "START YOUR EXIT JOURNEY",
+    "cta_url": "#"
+  },
+  "final_word": {
+    "label": "Final Word",
+    "title": "The Exit You Build vs. The Exit You Get",
+    "content": [
+      "Here's the truth most advisors won't tell you:",
+      "Your exit isn't determined the day you decide to sell.",
+      "It's determined by the decisions you make 12–36 months before.",
+      "",
+      "Will you prepare or procrastinate?",
+      "Will you modernize or maintain the status quo?",
+      "Will you partner with strategists or settle for brokers?",
+      "",
+      "The business you've built deserves a world-class exit.",
+      "Not \"market rate.\" Not \"good enough.\" Premium. Protected. On your terms.",
+      "That's what Centaura delivers."
+    ],
+    "cta_text": "THIS IS YOUR MOMENT: BOOK YOUR CONFIDENTIAL DIAGNOSTIC",
+    "cta_url": "#"
+  },
+  "footer": {
+    "logo": {
+      "text": "Centaura",
+      "tagline": "STRATEGIC CONSULTANCY"
+    },
+    "navigation": {
+      "title": "Navigation",
+      "links": [
+        {"text": "Home", "url": "#"},
+        {"text": "About", "url": "#"},
+        {"text": "Services", "url": "#"},
+        {"text": "The Framework", "url": "#"},
+        {"text": "Resources", "url": "#"},
+        {"text": "Blog", "url": "#"},
+        {"text": "Contact", "url": "#"}
+      ]
+    },
+    "contact": {
+      "title": "Connect with Centaura",
+      "email": "info@centauragroup.com",
+      "website": "https://www.centauragroup.com",
+      "social_links": [
+        {"platform": "LinkedIn", "url": "#"},
+        {"platform": "Instagram", "url": "#"},
+        {"platform": "Facebook", "url": "#"},
+        {"platform": "YouTube", "url": "#"}
+      ]
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Insights on M&A, digital strategy, and exit planning"
+    },
+    "tagline": {
+      "line1": "Centaura. Elevate Your Business.",
+      "line2": "Protect Your Legacy.",
+      "description": "We stand with mid-market owners and investors to maximize value, accelerate growth, and secure lasting success through M&A excellence, digital transformation, and exit strategy mastery."
+    },
+    "copyright": "© 2025 Centaura Group. All Rights Reserved.",
+    "legal_links": [
+      {"text": "Privacy Policy", "url": "#"},
+      {"text": "Terms of Service", "url": "#"}
+    ],
+    "designer": "Designed by KATALYST CRM"
+  },
+  "image_gallery": [
+    {
+      "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop",
+      "alt": "Business meeting"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop",
+      "alt": "Team collaboration"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
+      "alt": "Professional workspace"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop",
+      "alt": "Business professional"
+    }
+  ]
+}
+

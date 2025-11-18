@@ -1,0 +1,116 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Hero Section{% endblock %}
+{% block page_title %}Hero Section{% endblock %}
+
+{% block content %}
+<div class="max-w-content">
+    <div class="page-header">
+        <h2 class="page-header-title">Edit Hero Section</h2>
+        <p class="page-header-subtitle">Configure your homepage hero content</p>
+    </div>
+
+    <div class="card">
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label class="form-label" for="title">Title</label>
+                <input 
+                    type="text" 
+                    id="title" 
+                    name="title" 
+                    class="input" 
+                    value="{{ hero.title|default:'' }}" 
+                    placeholder="THE EXIT YOU DESERVE.\nTHE VALUE WE PROTECT."
+                    required
+                >
+                <p class="text-muted" style="margin-top: 4px; font-size: 12px;">Use \n for line breaks</p>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="subtitle">Subtitle</label>
+                <textarea 
+                    id="subtitle" 
+                    name="subtitle" 
+                    class="textarea"
+                >{{ hero.subtitle|default:'' }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="background_image">Background Image URL</label>
+                <input 
+                    type="text" 
+                    id="background_image" 
+                    name="background_image" 
+                    class="input" 
+                    value="{{ hero.background_image|default:'' }}"
+                    placeholder="https://... or leave empty"
+                >
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="cta_text">CTA Button Text</label>
+                <input 
+                    type="text" 
+                    id="cta_text" 
+                    name="cta_text" 
+                    class="input" 
+                    value="{{ hero.cta_text|default:'' }}"
+                    placeholder="FREE CONFIDENTIAL DIAGNOSTIC"
+                >
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="cta_link">CTA Button URL</label>
+                <input 
+                    type="text" 
+                    id="cta_link" 
+                    name="cta_link" 
+                    class="input" 
+                    value="{{ hero.cta_link|default:'#' }}"
+                    placeholder="# or https://..."
+                >
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="quote">Quote Text</label>
+                <textarea 
+                    id="quote" 
+                    name="quote" 
+                    class="textarea"
+                >{{ hero.quote|default:'' }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="founders_names">Founders Names</label>
+                <input 
+                    type="text" 
+                    id="founders_names" 
+                    name="founders_names" 
+                    class="input" 
+                    value="{{ hero.founders_names|default:'' }}"
+                    placeholder="JANE & AIMUN JAWAD"
+                >
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="founders_title">Founders Title</label>
+                <input 
+                    type="text" 
+                    id="founders_title" 
+                    name="founders_title" 
+                    class="input" 
+                    value="{{ hero.founders_title|default:'' }}"
+                    placeholder="FOUNDERS"
+                >
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Save Hero Section</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
