@@ -4,37 +4,38 @@
 {% block page_title %}Dashboard Overview{% endblock %}
 
 {% block content %}
-<div class="page-header">
-    <h2 class="page-header-title">Welcome back, {{ user.username }}</h2>
-    <p class="page-header-subtitle">Manage your content and monitor your site</p>
+<div class="mb-8">
+    <h2 class="text-3xl font-semibold text-white mb-2">Welcome back, {{ user.username }}</h2>
+    <p class="text-gray-400">Manage your content and monitor your site</p>
 </div>
 
-<div class="grid grid-cols-4">
-    <div class="stat-card">
-        <div class="stat-value">{{ stats_count }}</div>
-        <div class="stat-label">Stats</div>
+<div class="grid grid-cols-4 gap-6 mb-8">
+    <div class="bg-dark-card border border-white/10 rounded-xl p-6">
+        <div class="text-4xl font-semibold text-accent-cyan mb-2">{{ stats_count }}</div>
+        <div class="text-gray-400 text-sm">Stats</div>
     </div>
-    <div class="stat-card">
-        <div class="stat-value">{{ services_count }}</div>
-        <div class="stat-label">Services</div>
+    <div class="bg-dark-card border border-white/10 rounded-xl p-6">
+        <div class="text-4xl font-semibold text-accent-cyan mb-2">{{ services_count }}</div>
+        <div class="text-gray-400 text-sm">Services</div>
     </div>
-    <div class="stat-card">
-        <div class="stat-value">{{ portfolio_count }}</div>
-        <div class="stat-label">Portfolio Items</div>
+    <div class="bg-dark-card border border-white/10 rounded-xl p-6">
+        <div class="text-4xl font-semibold text-accent-cyan mb-2">{{ portfolio_count }}</div>
+        <div class="text-gray-400 text-sm">Portfolio Items</div>
     </div>
-    <div class="stat-card">
-        <div class="stat-value">{{ testimonials_count }}</div>
-        <div class="stat-label">Testimonials</div>
+    <div class="bg-dark-card border border-white/10 rounded-xl p-6">
+        <div class="text-4xl font-semibold text-accent-cyan mb-2">{{ testimonials_count }}</div>
+        <div class="text-gray-400 text-sm">Testimonials</div>
     </div>
 </div>
 
-<div class="card">
-    <h3 style="margin-bottom: 16px; font-size: 20px; font-weight: 600;">Quick Actions</h3>
-    <div class="flex gap-md">
-        <a href="{% url 'dashboard:hero_edit' %}" class="btn btn-primary">Edit Hero Section</a>
-        <a href="{% url 'dashboard:stats_list' %}" class="btn btn-secondary">Manage Stats</a>
-        <a href="{% url 'dashboard:services_list' %}" class="btn btn-secondary">Manage Services</a>
+<div class="bg-dark-card border border-white/10 rounded-xl p-6">
+    <h3 class="text-xl font-semibold text-white mb-4">Quick Actions</h3>
+    <div class="flex gap-4">
+        <a href="{% url 'dashboard:hero_edit' %}" class="px-6 py-2 bg-accent-orange text-white rounded-lg hover:bg-[#ff6a1a] transition-colors font-medium">Edit Hero Section</a>
+        <a href="{% url 'dashboard:stats_list' %}" class="px-6 py-2 bg-transparent border border-white/10 text-gray-400 rounded-lg hover:bg-white/5 hover:text-white transition-colors font-medium">Manage Stats</a>
+        <a href="{% url 'dashboard:services_list' %}" class="px-6 py-2 bg-transparent border border-white/10 text-gray-400 rounded-lg hover:bg-white/5 hover:text-white transition-colors font-medium">Manage Services</a>
     </div>
 </div>
 {% endblock %}
+
 

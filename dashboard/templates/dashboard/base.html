@@ -5,88 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Dashboard{% endblock %} - Centaura CMS</title>
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#0a0a0a',
+                        'dark-card': '#1a1a1a',
+                        'dark-sidebar': '#0f0f0f',
+                        'accent-cyan': '#19b2bc',
+                        'accent-orange': '#ff7e2e',
+                    }
+                }
+            }
+        }
+    </script>
     {% load static %}
     <link rel="stylesheet" href="{% static 'dashboard/css/dashboard.css' %}">
     {% block extra_css %}{% endblock %}
 </head>
-<body>
-    <div class="app-shell">
+<body class="bg-dark-bg text-white">
+    <div class="flex min-h-screen">
         <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-logo">
-                <h2>Centaura CMS</h2>
+        <aside class="w-64 bg-dark-sidebar border-r border-white/10 fixed h-screen overflow-y-auto">
+            <div class="p-6 border-b border-white/10 mb-6">
+                <h2 class="text-2xl font-semibold text-white">Centaura CMS</h2>
             </div>
             <nav>
-                <ul class="sidebar-nav">
+                <ul class="space-y-1 px-4">
                     <li>
-                        <a href="{% url 'dashboard:home' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
-                            <span>📊</span>
+                        <a href="{% url 'dashboard:home' %}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors {% if request.resolver_match.url_name == 'home' %}bg-white/5 text-accent-cyan border-l-2 border-accent-cyan{% endif %}">
+                            <i class="fas fa-chart-line w-5"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'dashboard:gallery' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">
-                            <span>🖼️</span>
+                        <a href="{% url 'dashboard:gallery' %}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors {% if request.resolver_match.url_name == 'gallery' %}bg-white/5 text-accent-cyan border-l-2 border-accent-cyan{% endif %}">
+                            <i class="fas fa-images w-5"></i>
                             <span>Gallery</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'dashboard:seo_edit' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'seo_edit' %}active{% endif %}">
-                            <span>🔍</span>
+                        <a href="{% url 'dashboard:seo_edit' %}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors {% if request.resolver_match.url_name == 'seo_edit' %}bg-white/5 text-accent-cyan border-l-2 border-accent-cyan{% endif %}">
+                            <i class="fas fa-search w-5"></i>
                             <span>SEO</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'dashboard:navigation_edit' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'navigation_edit' %}active{% endif %}">
-                            <span>🧭</span>
+                        <a href="{% url 'dashboard:navigation_edit' %}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors {% if request.resolver_match.url_name == 'navigation_edit' %}bg-white/5 text-accent-cyan border-l-2 border-accent-cyan{% endif %}">
+                            <i class="fas fa-map-marked-alt w-5"></i>
                             <span>Navigation</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'dashboard:hero_edit' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'hero_edit' %}active{% endif %}">
-                            <span>🎯</span>
+                        <a href="{% url 'dashboard:hero_edit' %}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors {% if request.resolver_match.url_name == 'hero_edit' %}bg-white/5 text-accent-cyan border-l-2 border-accent-cyan{% endif %}">
+                            <i class="fas fa-bullseye w-5"></i>
                             <span>Hero</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'dashboard:stats_list' %}" class="sidebar-nav-link {% if 'stats' in request.resolver_match.url_name %}active{% endif %}">
-                            <span>📈</span>
+                        <a href="{% url 'dashboard:stats_list' %}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors {% if 'stats' in request.resolver_match.url_name %}bg-white/5 text-accent-cyan border-l-2 border-accent-cyan{% endif %}">
+                            <i class="fas fa-chart-bar w-5"></i>
                             <span>Stats</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'dashboard:services_list' %}" class="sidebar-nav-link {% if 'services' in request.resolver_match.url_name %}active{% endif %}">
-                            <span>⚙️</span>
+                        <a href="{% url 'dashboard:services_list' %}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors {% if 'services' in request.resolver_match.url_name %}bg-white/5 text-accent-cyan border-l-2 border-accent-cyan{% endif %}">
+                            <i class="fas fa-cog w-5"></i>
                             <span>Services</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'dashboard:portfolio_list' %}" class="sidebar-nav-link {% if 'portfolio' in request.resolver_match.url_name %}active{% endif %}">
-                            <span>💼</span>
+                        <a href="{% url 'dashboard:portfolio_list' %}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors {% if 'portfolio' in request.resolver_match.url_name %}bg-white/5 text-accent-cyan border-l-2 border-accent-cyan{% endif %}">
+                            <i class="fas fa-briefcase w-5"></i>
                             <span>Portfolio</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'dashboard:testimonials_list' %}" class="sidebar-nav-link {% if 'testimonials' in request.resolver_match.url_name %}active{% endif %}">
-                            <span>💬</span>
+                        <a href="{% url 'dashboard:testimonials_list' %}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors {% if 'testimonials' in request.resolver_match.url_name %}bg-white/5 text-accent-cyan border-l-2 border-accent-cyan{% endif %}">
+                            <i class="fas fa-comments w-5"></i>
                             <span>Testimonials</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'dashboard:faqs_list' %}" class="sidebar-nav-link {% if 'faqs' in request.resolver_match.url_name %}active{% endif %}">
-                            <span>❓</span>
+                        <a href="{% url 'dashboard:faqs_list' %}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors {% if 'faqs' in request.resolver_match.url_name %}bg-white/5 text-accent-cyan border-l-2 border-accent-cyan{% endif %}">
+                            <i class="fas fa-question-circle w-5"></i>
                             <span>FAQs</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'dashboard:footer_edit' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'footer_edit' %}active{% endif %}">
-                            <span>📄</span>
+                        <a href="{% url 'dashboard:footer_edit' %}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors {% if request.resolver_match.url_name == 'footer_edit' %}bg-white/5 text-accent-cyan border-l-2 border-accent-cyan{% endif %}">
+                            <i class="fas fa-file-alt w-5"></i>
                             <span>Footer</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'dashboard:final_word_edit' %}" class="sidebar-nav-link {% if request.resolver_match.url_name == 'final_word_edit' %}active{% endif %}">
-                            <span>✨</span>
+                        <a href="{% url 'dashboard:final_word_edit' %}" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors {% if request.resolver_match.url_name == 'final_word_edit' %}bg-white/5 text-accent-cyan border-l-2 border-accent-cyan{% endif %}">
+                            <i class="fas fa-star w-5"></i>
                             <span>Final Word</span>
                         </a>
                     </li>
@@ -95,18 +112,18 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="main-content">
+        <main class="flex-1 ml-64 flex flex-col">
             <!-- Header -->
-            <header class="header">
-                <h1 class="header-title">{% block page_title %}Dashboard{% endblock %}</h1>
-                <div class="header-user">
-                    <span class="header-user-name">{{ user.username }}</span>
-                    <a href="{% url 'dashboard:logout' %}" class="btn btn-secondary">Logout</a>
+            <header class="bg-dark-card border-b border-white/10 px-8 py-5 flex justify-between items-center">
+                <h1 class="text-xl font-semibold text-white">{% block page_title %}Dashboard{% endblock %}</h1>
+                <div class="flex items-center gap-4">
+                    <span class="text-gray-400 text-sm">{{ user.username }}</span>
+                    <a href="{% url 'dashboard:logout' %}" class="px-4 py-2 bg-transparent border border-white/10 text-gray-400 rounded-lg hover:bg-white/5 hover:text-white transition-colors">Logout</a>
                 </div>
             </header>
 
             <!-- Content Area -->
-            <div class="content-area">
+            <div class="flex-1 p-8 bg-dark-bg">
                 {% block content %}{% endblock %}
             </div>
         </main>

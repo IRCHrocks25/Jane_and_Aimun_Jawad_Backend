@@ -70,3 +70,4 @@ class MediaAssetSerializer(serializers.ModelSerializer):
         model = MediaAsset
         fields = '__all__'
 
+
